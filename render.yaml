@@ -2,10 +2,12 @@ services:
   # Backend API Service
   - type: web
     name: hedge-fund-agent-backend
-    env: python
+    runtime: python
+    plan: free
     region: oregon
-    buildCommand: cd backend && pip install -r requirements.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: GEMINI_API_KEY
         sync: false
@@ -18,10 +20,12 @@ services:
   # Frontend Service
   - type: web
     name: hedge-fund-agent-frontend
-    env: node
+    runtime: node
+    plan: free
     region: oregon
-    buildCommand: cd frontend && npm install && npm run build
-    startCommand: cd frontend && npm start
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
     envVars:
       - key: NEXT_PUBLIC_API_URL
         sync: false
