@@ -10,7 +10,7 @@ interface PlayCardProps {
   isTracking?: boolean;
 }
 
-export default function PlayCard({ play, scenarioId, onTrack, isTracking }: PlayCardProps) {
+export default function PlayCard({ play, onTrack, isTracking }: PlayCardProps) {
   const getAssetIcon = (assetClass: string) => {
     switch (assetClass) {
       case 'equity':

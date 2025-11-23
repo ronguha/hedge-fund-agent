@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 
+import { Scenario } from '@/lib/api';
+
 interface ScenarioInputProps {
-  onScenarioCreated: (scenario: any) => void;
+  onScenarioCreated: (scenario: Scenario) => void;
 }
 
 export default function ScenarioInput({ onScenarioCreated }: ScenarioInputProps) {

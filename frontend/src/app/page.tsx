@@ -5,7 +5,7 @@ import ScenarioInput from '@/components/ScenarioInput';
 import PlayCard from '@/components/PlayCard';
 import TrackingDashboard from '@/components/TrackingDashboard';
 import { Scenario, TrackedScenario, trackingAPI } from '@/lib/api';
-import { TrendingUp, Activity } from 'lucide-react';
+import { Activity } from 'lucide-react';
 
 export default function Home() {
   const [currentScenario, setCurrentScenario] = useState<Scenario | null>(null);
