@@ -28,6 +28,6 @@ services:
     startCommand: npm start
     envVars:
       - key: NEXT_PUBLIC_API_URL
-        sync: false
+        value: https://hedge-fund-agent-backend.onrender.com
       - key: NODE_VERSION
         value: 18.17.0
